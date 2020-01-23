@@ -1,0 +1,4 @@
+git add // pour ajouter les fichiers en spécifiant les noms des fichiers 
+git status
+git commit "nom de commit" et les fichiers
+git push -u  origin master
