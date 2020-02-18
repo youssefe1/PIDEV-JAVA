@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="545.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="yousseff.TestController">
+   <children>
+      <JFXTextField fx:id="id_u" layoutX="56.0" layoutY="42.0" maxWidth="195.0" minWidth="195.0" prefHeight="40.0" prefWidth="195.0" promptText="ID Personnel" />
+      <JFXTextField fx:id="nom_u" layoutX="56.0" layoutY="125.0" maxWidth="195.0" minWidth="195.0" prefHeight="40.0" prefWidth="195.0" promptText="Nom Personnel" />
+      <JFXTextField fx:id="heuree" layoutX="56.0" layoutY="293.0" maxWidth="195.0" minWidth="195.0" prefHeight="40.0" prefWidth="195.0" promptText="Heure" />
+      <JFXTextField fx:id="nbra" layoutX="56.0" layoutY="382.0" maxWidth="195.0" minWidth="195.0" prefHeight="40.0" prefWidth="195.0" promptText="Nombre d'absence" />
+      <JFXButton fx:id="badd" layoutX="36.0" layoutY="473.0" onAction="#ADD" onMouseClicked="#ADD1" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: #293782;" text="ADD" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" layoutX="50.0" layoutY="501.0" size="1.8em" text="" wrappingWidth="14.0" />
+      <TableView fx:id="tableview1" layoutX="525.0" layoutY="14.0" onMouseClicked="#selectedr" prefHeight="191.0" prefWidth="441.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="105.0" text="ID" />
+          <TableColumn fx:id="nom" prefWidth="102.0" text="NOM" />
+            <TableColumn fx:id="prenom" prefWidth="112.0" text="PRENOM" />
+            <TableColumn fx:id="mail" prefWidth="119.0" text="Email" />
+        </columns>
+      </TableView>
+      <TableView fx:id="table2" layoutX="499.0" layoutY="235.0" onMouseClicked="#selectedr2" prefHeight="260.0" prefWidth="503.0">
+        <columns>
+          <TableColumn fx:id="id_t" prefWidth="75.0" text="ID " />
+          <TableColumn fx:id="id_user" prefWidth="75.0" text="ID user" />
+            <TableColumn fx:id="nom_user" prefWidth="75.0" text="Nom user" />
+            <TableColumn fx:id="date_t" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="heure_t" prefWidth="75.0" text="Heure" />
+            <TableColumn fx:id="nbr_t" prefWidth="125.0" text="Nombre d'absence" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="bedit" layoutX="164.0" layoutY="473.0" onAction="#Edit" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: #293782;" text="Edit" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="292.0" layoutY="473.0" onAction="#ADD" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: #293782;" text="Delete" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="EDIT" layoutX="177.0" layoutY="501.0" size="1.8em" />
+      <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="TRASH" layoutX="305.0" layoutY="500.0" size="1.8em" />
+      <JFXDatePicker fx:id="dattee" layoutX="53.0" layoutY="220.0" prefHeight="31.0" prefWidth="233.0" promptText="Date" />
+      <JFXDatePicker fx:id="h" layoutX="292.0" layoutY="114.0" showTime="true" />
+   </children>
+</AnchorPane>
