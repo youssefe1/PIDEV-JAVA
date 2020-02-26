@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fxml.PdfgenererController">
+   <children>
+      <BarChart fx:id="OffersChart" layoutX="48.0" layoutY="336.0" prefHeight="209.0" prefWidth="407.0" title="priority of user stories/project">
+         <xAxis>
+            <CategoryAxis label="priorities" side="BOTTOM" tickLabelFill="#221919" fx:id="x" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="y" label="number of user stories" side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <JFXButton fx:id="addbtn" buttonType="RAISED" layoutX="480.0" layoutY="423.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#stat" prefHeight="36.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #385F8C; -fx-background-radius: 0px;" text="statitiques" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="editbtn" buttonType="RAISED" layoutX="110.0" layoutY="257.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#okpdf" prefHeight="31.0" prefWidth="93.0" ripplerFill="WHITE" style="-fx-background-color: #385F8C; -fx-background-radius: 0px;" text="pdf" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXComboBox fx:id="combobp" layoutX="132.0" layoutY="164.0" prefHeight="43.0" prefWidth="149.0" promptText="project's name" />
+      <Label layoutX="48.0" layoutY="79.0" prefHeight="31.0" prefWidth="224.0" text="Statistiques" textFill="#385f8c">
+         <font>
+            <Font name="Gill Sans MT" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="27.0" layoutY="117.0" prefHeight="10.0" prefWidth="373.0" />
+   </children>
+</AnchorPane>

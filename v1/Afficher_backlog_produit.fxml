@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="564.0" prefWidth="1050.0" style="-fx-background-color: #0000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fxml.Afficher_backlog_produitController">
+   <children>
+      <TableView fx:id="tablefeat" layoutX="762.0" layoutY="157.0" onMouseClicked="#setf" prefHeight="200.0" prefWidth="224.0" styleClass="table-row-cell" stylesheets="@../CSS/tableview.css">
+        <columns>
+          <TableColumn fx:id="numfeature" prefWidth="75.0" text="num feature" />
+          <TableColumn fx:id="feature" prefWidth="150.0" text="feature" />
+            <TableColumn fx:id="id_pro" minWidth="0.0" prefWidth="0.0" text="id_pro" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableuser" layoutX="667.0" layoutY="447.0" onMouseClicked="#table_set" prefHeight="200.0" prefWidth="301.0" styleClass="table-row-cell" stylesheets="@../CSS/tableview.css">
+        <columns>
+          <TableColumn fx:id="id_f" prefWidth="75.0" text="num user" />
+          <TableColumn fx:id="id_u" prefWidth="75.0" text="num feature" />
+            <TableColumn fx:id="users" prefWidth="75.0" text="user_story" />
+            <TableColumn fx:id="priority" prefWidth="75.0" text="priority" />
+        </columns>
+      </TableView>
+      <Line endX="-100.0" endY="200.0" layoutX="428.0" layoutY="123.0" startX="-100.0" />
+      <Line endX="-100.0" endY="223.0" layoutX="429.0" layoutY="469.0" startX="-100.0" startY="-27.0" />
+      <Label layoutX="48.0" layoutY="12.0" prefHeight="31.0" prefWidth="224.0" text="Backlog Produit" textFill="#385f8c">
+         <font>
+            <Font name="Gill Sans MT" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="21.0" layoutY="43.0" prefHeight="10.0" prefWidth="373.0" />
+      <JFXComboBox fx:id="cbp1" layoutX="133.0" layoutY="107.0" prefHeight="31.0" prefWidth="149.0" promptText="project's names" />
+      <JFXTextField fx:id="featadd" layoutX="133.0" layoutY="183.0" promptText="feature" />
+      <JFXButton fx:id="addbtn" buttonType="RAISED" layoutX="153.0" layoutY="255.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#addfeature" prefHeight="36.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #385F8C; -fx-background-radius: 0px;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="nom_projet" layoutX="451.0" layoutY="123.0" promptText="project's name" />
+      <JFXTextField fx:id="featmodif" layoutX="451.0" layoutY="192.0" promptText="feature" />
+      <JFXButton fx:id="editbtn" buttonType="RAISED" layoutX="479.0" layoutY="258.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#updateaction" prefHeight="31.0" prefWidth="93.0" ripplerFill="WHITE" style="-fx-background-color: #385F8C; -fx-background-radius: 0px;" text="EDIT" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="EDIT" size="1.5em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="deletbnt" buttonType="RAISED" layoutX="794.0" layoutY="366.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#deleteaction" prefHeight="36.0" prefWidth="84.0" ripplerFill="WHITE" style="-fx-background-color: #385F8C; -fx-background-radius: 0px;" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="MINUS_CIRCLE" size="1.5em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXComboBox fx:id="cbfeat" layoutX="144.0" layoutY="451.0" prefHeight="25.0" prefWidth="127.0" promptText="feature's name" />
+      <JFXTextArea fx:id="userstoryarea" layoutX="115.0" layoutY="505.0" maxWidth="224.0" minWidth="185.0" prefHeight="85.0" prefWidth="185.0" promptText="user story" />
+      <JFXTextField fx:id="prio" layoutX="133.0" layoutY="614.0" promptText="priority" />
+      <JFXButton fx:id="addbtn1" buttonType="RAISED" layoutX="152.0" layoutY="655.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#adduser" prefHeight="31.0" prefWidth="93.0" ripplerFill="WHITE" style="-fx-background-color: #385F8C; -fx-background-radius: 0px;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="PLUS_CIRCLE" size="1.5em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="feat1" layoutX="432.0" layoutY="448.0" promptText="fearure's number" />
+      <JFXTextArea fx:id="userstorymodif" layoutX="425.0" layoutY="495.0" maxWidth="177.0" minWidth="177.0" prefHeight="105.0" prefWidth="177.0" promptText="user story" />
+      <JFXTextField fx:id="priomodif" layoutX="432.0" layoutY="623.0" promptText="priority" />
+      <JFXButton fx:id="editbtn1" buttonType="RAISED" layoutX="459.0" layoutY="655.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#updateuser" prefHeight="31.0" prefWidth="93.0" ripplerFill="WHITE" style="-fx-background-color: #385F8C; -fx-background-radius: 0px;" text="EDIT" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="EDIT" size="1.5em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="deletbnt1" buttonType="RAISED" layoutX="763.0" layoutY="649.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#deleteuser" prefHeight="31.0" prefWidth="110.0" ripplerFill="WHITE" style="-fx-background-color: #385F8C; -fx-background-radius: 0px;" text="DELETE" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphStyle="-fx-fill:#fff" iconName="MINUS_CIRCLE" size="1.5em" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="68.0" layoutY="369.0" prefHeight="31.0" prefWidth="224.0" text="Features" textFill="#385f8c">
+         <font>
+            <Font name="Gill Sans MT" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="48.0" layoutY="411.0" prefHeight="10.0" prefWidth="373.0" />
+   </children>
+</AnchorPane>

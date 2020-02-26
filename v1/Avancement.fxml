@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Fxml.AvancementController">
+   <children>
+      <BarChart fx:id="sprint" layoutX="94.0" layoutY="105.0" prefHeight="241.0" prefWidth="300.0" title="nombre de sprint">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <BarChart fx:id="tache" layoutX="605.0" layoutY="117.0" prefHeight="232.0" prefWidth="260.0" title="nombre de tache faite">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <JFXComboBox fx:id="cbp" layoutX="453.0" layoutY="80.0" promptText="projects name" />
+      <JFXButton fx:id="addbtn" buttonType="RAISED" layoutX="189.0" layoutY="373.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#affsprint" prefHeight="36.0" prefWidth="144.0" ripplerFill="WHITE" style="-fx-background-color: #385F8C; -fx-background-radius: 0px;" text="afficher sprint" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="addbtn1" buttonType="RAISED" layoutX="670.0" layoutY="365.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#afftache" prefHeight="36.0" prefWidth="144.0" ripplerFill="WHITE" style="-fx-background-color: #385F8C; -fx-background-radius: 0px;" text="afficher taches faites" textFill="WHITE">
+         <font>
+            <Font name="Calibri Light" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</Pane>
