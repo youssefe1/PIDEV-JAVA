@@ -1,0 +1,37 @@
+{% extends 'backPO.html.twig'%}
+{% block content %}
+
+    {{ form_start(f,{'attr':{'novalidate':'novalidate'}}) }}
+    <h4 class="form-section"><i class="ft-clipboard"></i> User Story</h4>
+    <div class="form-group row">
+
+        <div class="col-md-9">
+            {{ form_widget(f.ideBacklogFeat,{ 'attr': {'class': 'form-control'}}) }}
+        </div>
+    </div>
+    <div class="form-group row">
+
+
+        <div class="col-md-9">
+            {{ form_widget(f.userStoryBp,{ 'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(f.userStoryBp,{ 'attr': {'class': 'col-md-3 label-control'}})}}
+        </div>
+    </div>
+    <div class="form-group row">
+        
+        <div class="col-md-9">
+            {{ form_widget(f.priorityBp,{ 'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(f.priorityBp)}}
+        </div>
+    </div>
+
+    <div class="form-actions">
+        <label class="col-md-3 label-control" for="projectinput6"> </label>
+
+        {{ form_widget(f.save,{ 'attr': {'class': 'btn btn-primary'}}) }}
+
+
+    </div>
+
+    {{  form_end(f)}}
+{% endblock %}

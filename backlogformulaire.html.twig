@@ -1,0 +1,31 @@
+
+     {% extends 'backPO.html.twig'%}
+     {% block content %}
+
+         {{ form_start(f,{'attr':{'novalidate':'novalidate'}}) }} {#enlever controle html#}
+         <h4 class="form-section"><i class="ft-clipboard"></i> feature</h4>
+         <div class="form-group row">
+
+             <div class="col-md-9">
+                 {{ form_widget(f.ideProjet,{ 'attr': {'class': 'form-control'}}) }}
+             </div>
+         </div>
+         <div class="form-group row">
+
+
+             <div class="col-md-9">
+                 {{ form_widget(f.feature,{ 'attr': {'class': 'form-control'}}) }}
+                 {{ form_errors(f.feature,{ 'attr': {'class': 'danger text-muted'}}) }}
+             </div>
+         </div>
+
+
+         <div class="form-actions">
+             <label class="col-md-3 label-control" for="projectinput6" > </label>
+             {{ form_widget(f.save,{ 'attr': {'class': 'btn btn-primary'}}) }}
+
+
+         </div>
+
+         {{  form_end(f)}}
+     {% endblock %}
